@@ -1,0 +1,19 @@
+# robots.txt para clebersantos.dev
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clebersantos.dev/sitemap.xml
+
+# Bloquear arquivos desnecessários
+Disallow: /cgi-bin/
+Disallow: /*.php$
+Disallow: /admin/
+
+# Permitir rastreamento de CSS e JS
+Allow: /*.css$
+Allow: /*.js$
+
+# Crawl-delay (opcional)
+Crawl-delay: 1

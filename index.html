@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <!-- SEO Meta Tags -->
+  <title>Cleber Santos - Desenvolvedor Frontend | React, JavaScript & Web Design</title>
+  <meta name="description" content="Cleber Santos, desenvolvedor frontend especializado em React, JavaScript e criação de experiências web modernas. Portfólio com projetos, habilidades e contato profissional.">
+  <meta name="keywords" content="desenvolvedor frontend, desenvolvedor web, React developer, JavaScript, HTML5, CSS3, web design, portfolio desenvolvedor, Cleber Santos, frontend São Paulo">
+  <meta name="author" content="Cleber Santos">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://clebersantos.dev/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clebersantos.dev/">
+  <meta property="og:title" content="Cleber Santos - Desenvolvedor Frontend | React & JavaScript">
+  <meta property="og:description" content="Desenvolvedor frontend criando experiências digitais modernas e elegantes. Especialista em React, JavaScript e desenvolvimento web.">
+  <meta property="og:image" content="https://clebersantos.dev/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Cleber Santos - Portfolio">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://clebersantos.dev/">
+  <meta name="twitter:title" content="Cleber Santos - Desenvolvedor Frontend">
+  <meta name="twitter:description" content="Desenvolvedor frontend especializado em React e JavaScript. Confira meu portfólio com projetos e habilidades.">
+  <meta name="twitter:image" content="https://clebersantos.dev/twitter-image.jpg">
+  <meta name="twitter:creator" content="@clebersantos">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#00ffff">
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  
+  <!-- DNS Prefetch -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Structured Data - JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Cleber Santos",
+    "url": "https://clebersantos.dev",
+    "image": "https://clebersantos.dev/profile-image.jpg",
+    "sameAs": [
+      "https://github.com/clebersantos",
+      "https://linkedin.com/in/clebersantos",
+      "https://wa.me/5511953057516"
+    ],
+    "jobTitle": "Desenvolvedor Frontend",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelancer"
+    },
+    "knowsAbout": ["React", "JavaScript", "HTML5", "CSS3", "Web Development", "Frontend Development"],
+    "email": "clebersantos232@gmail.com",
+    "telephone": "+55-11-95305-7516",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Cleber Santos - Portfolio",
+    "url": "https://clebersantos.dev",
+    "description": "Portfolio profissional de Cleber Santos, desenvolvedor frontend",
+    "author": {
+      "@type": "Person",
+      "name": "Cleber Santos"
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Cleber Santos",
+      "alternateName": "Cleber.dev",
+      "description": "Desenvolvedor Frontend especializado em React e JavaScript",
+      "image": "https://clebersantos.dev/profile-image.jpg"
+    }
+  }
+  </script>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --bg-light: #1a1a2e;
+      --text: #f0f0f0;
+      --text-dim: #a0a0a0;
+      --accent: #00ffff;
+      --accent-secondary: #0077ff;
+      --gradient: linear-gradient(90deg, #00ffff, #0077ff);
+      --card-bg: rgba(255,255,255,0.05);
+    }
+    [data-theme="light"] {
+      --bg: #f5f5f5;
+      --bg-light: #ffffff;
+      --text: #1a1a1a;
+      --text-dim: #666666;
+      --accent: #0088ff;
+      --accent-secondary: #00ccff;
+      --gradient: linear-gradient(90deg, #0088ff, #00ccff);
+      --card-bg: rgba(0,0,0,0.05);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    #particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 0.5;
+    }
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: var(--gradient);
+      z-index: 1001;
+      box-shadow: 0 0 10px var(--accent);
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: rgba(10,10,15,0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+    [data-theme="light"] header {
+      background: rgba(255,255,255,0.9);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 1.2rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .header-right { display: flex; align-items: center; gap: 1rem; }
+    
+    /* Hamburger Menu */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      z-index: 1001;
+      padding: 5px;
+    }
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* Mobile Menu */
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: var(--bg-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      transition: right 0.4s ease;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+    }
+    nav.active {
+      right: 0;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0;
+      position: relative;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      font-size: 1.2rem;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.4s ease;
+    }
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: var(--accent); }
+    .theme-toggle {
+      background: var(--card-bg);
+      border: 1px solid var(--accent);
+      border-radius: 50px;
+      width: 50px;
+      height: 26px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .theme-toggle::before {
+      content: "🌙";
+      position: absolute;
+      left: 3px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+    [data-theme="light"] .theme-toggle::before {
+      content: "☀️";
+      left: 24px;
+    }
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 1s ease;
+    }
+    .typing-text {
+      font-size: 1rem;
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+      min-height: 2.5rem;
+      animation: fadeInUp 1s ease 0.3s both;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeInUp 1s ease 0.6s both;
+    }
+    .btn {
+      padding: 0.8rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid var(--accent);
+    }
+    .btn-primary {
+      background: var(--gradient);
+      color: #000;
+      border: none;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+    .btn-secondary:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-3px);
+    }
+    main { padding-top: 60px; }
+    section {
+      min-height: 100vh;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    section.visible { opacity: 1; transform: translateY(0); }
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      position: relative;
+      text-align: center;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 3px;
+      background: var(--gradient);
+      box-shadow: 0 0 10px var(--accent);
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+      align-items: center;
+    }
+    .about-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: var(--gradient);
+      padding: 5px;
+      margin: 0 auto;
+    }
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--bg-light);
+    }
+    .about-text { text-align: center; }
+    .about-text h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    .about-text p {
+      line-height: 1.8;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      max-width: 1000px;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .skill-card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.2);
+      border-color: var(--accent);
+    }
+    .skill-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .skill-name { font-weight: 600; font-size: 0.9rem; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 1200px;
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,255,255,0.3);
+    }
+    .project-image {
+      width: 100%;
+      height: 180px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: rgba(0,0,0,0.2);
+    }
+    .project-content { padding: 1.2rem; }
+    .project-content h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .project-content p {
+      color: var(--text-dim);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .tag {
+      background: rgba(0,255,255,0.1);
+      color: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      border: 1px solid var(--accent);
+    }
+    .project-links { display: flex; gap: 1rem; }
+    .project-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .project-link:hover {
+      transform: translateX(5px);
+      text-shadow: 0 0 10px var(--accent);
+    }
+    .timeline {
+      max-width: 800px;
+      width: 100%;
+      position: relative;
+      margin-top: 1rem;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      transform: none;
+      width: 2px;
+      height: 100%;
+      background: var(--gradient);
+    }
+    .timeline-item {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 2rem;
+      padding-right: 0;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-content {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 1.2rem;
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: all 0.3s ease;
+    }
+    .timeline-content:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.2);
+    }
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform: translateX(-50%);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 15px var(--accent);
+      z-index: 1;
+    }
+    .timeline-year {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-title { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .timeline-description { color: var(--text-dim); font-size: 0.85rem; }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 600px;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 1rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 0.5rem;
+      background: var(--card-bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(0,255,255,0.2);
+    }
+    button[type="submit"] {
+      background: var(--gradient);
+      border: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+    button[type="submit"]:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.4);
+    }
+    .form-status {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .form-status.success {
+      background: rgba(0, 255, 255, 0.1);
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      opacity: 1;
+    }
+    .site-footer {
+      padding: 3rem 2rem;
+      background: var(--bg-light);
+      border-top: 1px solid rgba(0, 255, 255, 0.2);
+      position: relative;
+    }
+    .site-footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--gradient);
+      box-shadow: 0 0 15px var(--accent);
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .footer-nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-nav a {
+      color: var(--text);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .footer-nav a:hover {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+    .social-icons { display: flex; gap: 1.5rem; }
+    .social-icons a {
+      color: var(--accent);
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+      text-shadow: 0 0 20px var(--accent);
+    }
+    .copyright {
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--gradient);
+      color: #000;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0,255,255,0.4);
+      transition: all 0.3s ease;
+      opacity: 0;
+      transform: translateY(100px);
+      pointer-events: none;
+      z-index: 999;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .back-to-top:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 10px 30px rgba(0,255,255,0.6);
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Tablet */
+    @media (min-width: 576px) {
+      .hero-content h2 { font-size: 2.5rem; }
+      .typing-text { font-size: 1.2rem; }
+      .section-title { font-size: 2rem; }
+      .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    }
+    
+    /* Desktop */
+    @media (min-width: 768px) {
+      header { padding: 1rem 2rem; }
+      header h1 { font-size: 1.5rem; }
+      .hamburger { display: none; }
+      nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        flex-direction: row;
+        gap: 0;
+        box-shadow: none;
+      }
+      nav a { font-size: 1rem; margin: 0 1rem; }
+      .header-right { gap: 2rem; }
+      .hero-content h2 { font-size: 3.5rem; }
+      .typing-text { font-size: 1.5rem; }
+      section { padding: 4rem 2rem; }
+      .section-title { font-size: 2.5rem; margin-bottom: 3rem; }
+      .about-content {
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+      }
+      .about-image { width: 250px; height: 250px; }
+      .about-text { text-align: left; }
+      .about-text h3 { font-size: 1.8rem; }
+      .about-text p { font-size: 1rem; }
+      .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .skill-card { padding: 2rem 1rem; }
+      .skill-icon { font-size: 3rem; margin-bottom: 1rem; }
+      .skill-name { font-size: 1rem; }
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .project-image { height: 200px; font-size: 4rem; }
+      .project-content { padding: 1.5rem; }
+      .project-content h3 { font-size: 1.5rem; }
+      .project-content p { font-size: 1rem; }
+      .timeline { margin-top: 2rem; }
+      .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .timeline-item {
+        justify-content: flex-end;
+        padding-right: 50%;
+        padding-left: 0;
+        margin-bottom: 3rem;
+      }
+      .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+        padding-left: 50%;
+        padding-right: 0;
+      }
+      .timeline-content {
+        padding: 1.5rem;
+        width: 90%;
+      }
+      .timeline-content:hover { transform: scale(1.05); }
+      .timeline-dot {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+      }
+      .timeline-year { font-size: 1.2rem; }
+      .timeline-title { font-size: 1rem; }
+      .timeline-description { font-size: 0.9rem; }
+      .back-to-top { width: 50px; height: 50px; bottom: 2rem; right: 2rem; }
+      .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    
+    /* Large Desktop */
+    @media (min-width: 1024px) {
+      .projects-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scroll-progress"></div>
+  <canvas id="particles"></canvas>
+
+  <header>
+    <h1>Cleber.dev</h1>
+    <div class="header-right">
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav">
+        <a href="#sobre" onclick="closeMenu()">Sobre</a>
+        <a href="#skills" onclick="closeMenu()">Skills</a>
+        <a href="#projetos" onclick="closeMenu()">Projetos</a>
+        <a href="#experiencia" onclick="closeMenu()">Experiência</a>
+        <a href="#contato" onclick="closeMenu()">Contato</a>
+      </nav>
+      <div class="theme-toggle" onclick="toggleTheme()"></div>
+    </div>
+  </header>
+
+  <main itemscope itemtype="https://schema.org/Person">
+    <meta itemprop="name" content="Cleber Santos">
+    <meta itemprop="jobTitle" content="Desenvolvedor Frontend">
+    <meta itemprop="email" content="clebersantos232@gmail.com">
+    
+    <section id="hero">
+      <div class="hero-content">
+        <h2 itemprop="name">Olá, eu sou Cleber Santos</h2>
+        <div class="typing-text" id="typingText" itemprop="description"></div>
+        <div class="cta-buttons">
+          <a href="#projetos" class="btn btn-primary" aria-label="Ver meus projetos">Ver Projetos</a>
+          <a href="#contato" class="btn btn-secondary" aria-label="Entre em contato comigo">Entre em Contato</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="/images/foto_logo/foto_portifolio_01.jpg" alt="Foto de Cleber Santos - Desenvolvedor Frontend" loading="lazy" itemprop="image" width="250" height="250">
+        </div>
+        <div class="about-text">
+          <h3>Desenvolvedor Frontend</h3>
+          <p itemprop="description">Sou um entusiasta da tecnologia e estou dando meus primeiros passos no universo da programação. Atualmente, estou mergulhado nos estudos de HTML, CSS e JavaScript, construindo projetos, aprendendo com cada linha de código e me apaixonando cada vez mais por transformar ideias em experiências digitais.</p><br>
+          <p>Mesmo sem experiência profissional, carrego comigo algo que não se ensina: vontade de aprender, curiosidade e dedicação. Cada desafio é uma oportunidade de crescimento, e cada erro, uma chance de evoluir.</p><br>
+          <p>Meu objetivo? Conquistar minha primeira oportunidade na área e contribuir com soluções criativas, funcionais e bem estruturadas.</p><br>
+          <p> Se você está em busca de alguém com energia, comprometimento e sede de conhecimento, vamos conversar!</p>
+           
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Habilidades</h2>
+      <div class="skills-grid" itemprop="knowsAbout">
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-html5" aria-hidden="true"></i></div>
+          <div class="skill-name">HTML5</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-css3-alt" aria-hidden="true"></i></div>
+          <div class="skill-name">CSS3</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-js" aria-hidden="true"></i></div>
+          <div class="skill-name">JavaScript</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-react" aria-hidden="true"></i></div>
+          <div class="skill-name">React</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-node" aria-hidden="true"></i></div>
+          <div class="skill-name">Node.js</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-git-alt" aria-hidden="true"></i></div>
+          <div class="skill-name">Git</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fab fa-sass" aria-hidden="true"></i></div>
+          <div class="skill-name">Sass</div>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
+          <div class="skill-name">MongoDB</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos">
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <div class="projects-grid">
+        <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+          <div class="project-image"><i class="fas fa-shopping-cart" aria-hidden="true"></i></div>
+          <div class="project-content">
+            <h3 itemprop="name">E-commerce Futurista</h3>
+            <p itemprop="description">Plataforma de e-commerce completa com carrinho de compras, pagamento integrado e dashboard administrativo.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Ver código do projeto E-commerce no GitHub"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              <a href="#" class="project-link" aria-label="Ver demonstração do projeto E-commerce"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+          <div class="project-image"><i class="fas fa-tasks" aria-hidden="true"></i></div>
+          <div class="project-content">
+            <h3 itemprop="name">Task Manager Pro</h3>
+            <p itemprop="description">Aplicativo de gerenciamento de tarefas com drag and drop, filtros avançados e sincronização em tempo real.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Tailwind</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Ver código do Task Manager no GitHub"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              <a href="#" class="project-link" aria-label="Ver demonstração do Task Manager"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</a>
+            </div>
+          </div>
+          
+        </article>
+        <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
+          <div class="project-image"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
+          <div class="project-content">
+            <h3 itemprop="name">Dashboard Analytics</h3>
+            <p itemprop="description">Dashboard interativo para visualização de dados com gráficos dinâmicos e relatórios personalizados.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">API REST</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Ver código do Dashboard Analytics no GitHub"><i class="fas fa-code" aria-hidden="true"></i> Código</a>
+              <a href="#" class="project-link" aria-label="Ver demonstração do Dashboard Analytics"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <h2 class="section-title">Experiência</h2>
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <time class="timeline-year" datetime="2023">2023 - Presente</time>
+            <h3 class="timeline-title">Desenvolvedor Frontend Sênior</h3>
+            <p class="timeline-description">Liderando projetos de alto impacto, desenvolvendo interfaces modernas com React e mentorando desenvolvedores júnior.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <time class="timeline-year" datetime="2021">2021 - 2023</time>
+            <h3 class="timeline-title">Desenvolvedor Frontend Pleno</h3>
+            <p class="timeline-description">Desenvolvimento de aplicações web responsivas e performáticas, trabalhando com equipes ágeis e metodologia Scrum.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <time class="timeline-year" datetime="2020">2020 - 2021</time>
+            <h3 class="timeline-title">Desenvolvedor Frontend Júnior</h3>
+            <p class="timeline-description">Início da carreira profissional, aprendendo práticas de desenvolvimento moderno e trabalhando em projetos diversos.</p>
+          </div>
+        </article>
+        <article class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <time class="timeline-year" datetime="2019">2019 - 2020</time>
+            <h3 class="timeline-title">Formação em Desenvolvimento Web</h3>
+            <p class="timeline-description">Estudos intensivos em HTML, CSS, JavaScript e frameworks modernos. Desenvolvimento de projetos pessoais.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato">
+      <h2 class="section-title">Entre em Contato</h2>
+      <form id="contactForm" action="https://formspree.io/f/xrbyyzrj" method="POST" itemscope itemtype="https://schema.org/ContactPage">
+        <label for="nameInput" class="sr-only">Seu nome</label>
+        <input id="nameInput" name="name" type="text" placeholder="Seu nome" required aria-required="true">
+        <label for="emailInput" class="sr-only">Seu e-mail</label>
+        <input id="emailInput" name="email" type="email" placeholder="Seu e-mail" required aria-required="true">
+        <label for="messageInput" class="sr-only">Sua mensagem</label>
+        <textarea id="messageInput" name="message" rows="5" placeholder="Sua mensagem" required aria-required="true"></textarea>
+        <button type="submit" aria-label="Enviar mensagem de contato">Enviar Mensagem</button>
+      </form>
+      <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <p class="footer-logo">Cleber.dev</p>
+        <nav class="footer-nav">
+          <a href="#sobre">Sobre</a>
+          <a href="#skills">Skills</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#experiencia">Experiência</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:clebersantos232@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://wa.me/5511953057516" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <p class="copyright">© 2025 Cleber Santos | Todos os direitos reservados</p>
+      </div>
+    </div>
+    <a href="#hero" class="back-to-top" aria-label="Voltar ao topo">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </footer>
+
+  <script>
+    // Menu Hamburguer
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      const hamburger = document.querySelector('.hamburger');
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const nav = document.getElementById('nav');
+      const hamburger = document.querySelector('.hamburger');
+      nav.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+
+    // Particles Animation
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particlesArray = [];
+    const numberOfParticles = 100;
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 1;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.x < 0) this.x = canvas.width;
+        if (this.y > canvas.height) this.y = 0;
+        if (this.y < 0) this.y = canvas.height;
+      }
+      draw() {
+        ctx.fillStyle = 'rgba(0, 255, 255, 0.5)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    function init() {
+      particlesArray = [];
+      for (let i = 0; i < numberOfParticles; i++) {
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].update();
+        particlesArray[i].draw();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+
+    // Typing Effect
+    const phrases = [
+      "Transformando ideias em experiências digitais",
+      "Desenvolvedor Frontend Criativo",
+      "Criando interfaces modernas e elegantes"
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingText = document.getElementById('typingText');
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        setTimeout(() => isDeleting = true, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+
+      const speed = isDeleting ? 50 : 100;
+      setTimeout(type, speed);
+    }
+
+    type();
+
+    // Theme Toggle
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.body.setAttribute('data-theme', savedTheme);
+
+    // Scroll Progress
+    window.addEventListener('scroll', () => {
+      const scrollProgress = document.querySelector('.scroll-progress');
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = progress + '%';
+    });
+
+    // Section Animation
+    const sections = document.querySelectorAll('section');
+    const observerOptions = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Back to Top Button
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    });
+
+    // Form Submission
+    const form = document.getElementById('contactForm');
+    const formStatus = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          formStatus.textContent = '✅ Mensagem enviada com sucesso! Entrarei em contato em breve.';
+          formStatus.classList.add('success');
+          form.reset();
+        } else {
+          formStatus.textContent = '❌ Erro ao enviar mensagem. Tente novamente.';
+          formStatus.style.background = 'rgba(255, 0, 0, 0.1)';
+          formStatus.style.color = '#ff4444';
+          formStatus.style.border = '1px solid #ff4444';
+          formStatus.style.opacity = '1';
+        }
+      } catch (error) {
+        formStatus.textContent = '❌ Erro ao enviar mensagem. Tente novamente.';
+        formStatus.style.background = 'rgba(255, 0, 0, 0.1)';
+        formStatus.style.color = '#ff4444';
+        formStatus.style.border = '1px solid #ff4444';
+        formStatus.style.opacity = '1';
+      }
+
+      setTimeout(() => {
+        formStatus.classList.remove('success');
+        formStatus.textContent = '';
+        formStatus.style.opacity = '0';
+      }, 5000);
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
