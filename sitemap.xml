@@ -3,13 +3,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
   <!-- Página Principal -->
-  <url>
-    <!--<loc>https://clebersantos.dev/</loc>-->
+ 
     <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <!--<image:loc>https://clebersantos.dev/images/og-image.jpg</image:loc>-->
+      <images src="/images/profile-image.jpeg">
       <image:title>Cleber Santos - Desenvolvedor Frontend</image:title>
     </image:image>
   </url>

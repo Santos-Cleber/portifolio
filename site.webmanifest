@@ -2,7 +2,7 @@
   "name": "Cleber Santos - Portfolio",
   "short_name": "Cleber.dev",
   "description": "Portfolio profissional de Cleber Santos - Desenvolvedor Frontend",
-  "start_url": "/",
+  "start_url": "/Portfolio/images/profile-image.jpeg",
   "display": "standalone",
   "background_color": "#0a0a0f",
   "theme_color": "#00ffff",
