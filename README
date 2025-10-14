@@ -1,0 +1,65 @@
+# Portfolio - Cleber Santos
+
+Portfolio pessoal de desenvolvedor frontend, criado com HTML, CSS e JavaScript puro.
+
+## 🚀 Tecnologias
+
+- HTML5
+- CSS3 (Animações, Flexbox, Grid)
+- JavaScript (Vanilla)
+- Font Awesome (ícones)
+- Google Fonts (Poppins)
+
+## 💡 Funcionalidades
+
+- ✅ Design responsivo (mobile-first)
+- ✅ Tema claro/escuro
+- ✅ Animações suaves
+- ✅ Menu hambúrguer mobile
+- ✅ Efeito de digitação
+- ✅ Partículas animadas no fundo
+- ✅ Scroll progress bar
+- ✅ Formulário de contato
+- ✅ Botão "voltar ao topo"
+
+## 📦 Como Usar
+
+1. Faça o download do arquivo `index.html`
+2. Abra com qualquer navegador
+3. Não precisa de servidor - funciona offline!
+
+## 🎨 Personalização
+
+Para personalizar o portfolio:
+
+1. Abra o arquivo `index.html` em um editor de código
+2. Modifique os textos nas seções
+3. Atualize os links das redes sociais
+4. Adicione seus projetos reais
+5. Substitua o emoji por sua foto (opcional)
+
+## 📝 Seções
+
+- **Hero** - Apresentação inicial com efeito de digitação
+- **Sobre** - Informações pessoais e objetivos
+- **Skills** - Habilidades técnicas
+- **Projetos** - Portfolio de projetos
+- **Experiência** - Timeline profissional
+- **Contato** - Formulário de contato
+
+## 🔗 Links Úteis
+
+- Email: clebersantos232@gmail.com
+- WhatsApp: +55 11 95305-7516
+- GitHub: [Adicione seu link]
+- LinkedIn: [Adicione seu link]
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+## 👨‍💻 Autor
+
+**Cleber Santos**
+- Desenvolvedor Frontend em formação
+- Apaixonado por tecnologia e aprendizado contínuo
