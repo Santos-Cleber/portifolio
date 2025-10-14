@@ -14,14 +14,15 @@
   <meta name="language" content="Portuguese">
   <meta name="revisit-after" content="7 days">
   
-  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://clebersantos.dev/">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  
+  <meta property="og:url" content="https://clebersantos.dev/">
   <meta property="og:title" content="Cleber Santos - Desenvolvedor Frontend | React & JavaScript">
   <meta property="og:description" content="Desenvolvedor frontend criando experiências digitais modernas e elegantes. Especialista em React, JavaScript e desenvolvimento web.">
-  
+  <meta property="og:image" content="https://clebersantos.dev/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="pt_BR">
@@ -29,10 +30,10 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  
+  <meta name="twitter:url" content="https://clebersantos.dev/">
   <meta name="twitter:title" content="Cleber Santos - Desenvolvedor Frontend">
   <meta name="twitter:description" content="Desenvolvedor frontend especializado em React e JavaScript. Confira meu portfólio com projetos e habilidades.">
- 
+  <meta name="twitter:image" content="https://clebersantos.dev/twitter-image.jpg">
   <meta name="twitter:creator" content="@clebersantos">
   
   <!-- Favicon -->
@@ -61,7 +62,8 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Cleber Santos",
-     
+    "url": "https://clebersantos.dev",
+    "image": "https://clebersantos.dev/profile-image.jpg",
     "sameAs": [
       "https://github.com/clebersantos",
       "https://linkedin.com/in/clebersantos",
@@ -89,7 +91,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Cleber Santos - Portfolio",
-   
+    "url": "https://clebersantos.dev",
     "description": "Portfolio profissional de Cleber Santos, desenvolvedor frontend",
     "author": {
       "@type": "Person",
@@ -108,7 +110,7 @@
       "name": "Cleber Santos",
       "alternateName": "Cleber.dev",
       "description": "Desenvolvedor Frontend especializado em React e JavaScript",
-     
+      "image": "https://clebersantos.dev/profile-image.jpg"
     }
   }
   </script>
@@ -170,7 +172,6 @@
       z-index: 1001;
       box-shadow: 0 0 10px var(--accent);
     }
-    
     header {
       display: flex;
       justify-content: space-between;
@@ -868,12 +869,10 @@
           <img src="/images/profile-image.jpeg" alt="Foto de Cleber Santos - Desenvolvedor Frontend" loading="lazy" itemprop="image" width="250" height="250">
         </div>
         <div class="about-text">
-          <h3>Desenvolvedor Frontend</h3>
-          <p itemprop="description">Sou um entusiasta da tecnologia e estou dando meus primeiros passos no universo da programação. Atualmente, estou mergulhado nos estudos de HTML, CSS e JavaScript, construindo projetos, aprendendo com cada linha de código e me apaixonando cada vez mais por transformar ideias em experiências digitais.</p><br>
-          <p>Mesmo sem experiência profissional, carrego comigo algo que não se ensina: vontade de aprender, curiosidade e dedicação. Cada desafio é uma oportunidade de crescimento, e cada erro, uma chance de evoluir.</p><br>
-          <p>Meu objetivo? Conquistar minha primeira oportunidade na área e contribuir com soluções criativas, funcionais e bem estruturadas.</p><br>
-          <p> Se você está em busca de alguém com energia, comprometimento e sede de conhecimento, vamos conversar!</p>
-           
+          <h3>Desenvolvedor Frontend Apaixonado</h3>
+          <p itemprop="description">Sou um desenvolvedor frontend especializado em criar experiências digitais elegantes e de alto desempenho. Com mais de 3 anos de experiência, transformo ideias em realidade através de código limpo.</p>
+          <p>Minha jornada na programação começou com curiosidade e evoluiu para uma paixão por resolver problemas complexos. Domino tecnologias modernas como React, JavaScript e TypeScript.</p>
+          <p>Quando não estou codando, gosto de contribuir para projetos open source e compartilhar conhecimento com a comunidade dev.</p>
         </div>
       </div>
     </section>
@@ -950,7 +949,6 @@
               <a href="#" class="project-link" aria-label="Ver demonstração do Task Manager"><i class="fas fa-external-link-alt" aria-hidden="true"></i> Demo</a>
             </div>
           </div>
-          
         </article>
         <article class="project-card" itemscope itemtype="https://schema.org/CreativeWork">
           <div class="project-image"><i class="fas fa-chart-line" aria-hidden="true"></i></div>
@@ -1137,6 +1135,7 @@
     const phrases = [
       "Transformando ideias em experiências digitais",
       "Desenvolvedor Frontend Criativo",
+      "Especialista em React & JavaScript",
       "Criando interfaces modernas e elegantes"
     ];
     let phraseIndex = 0;

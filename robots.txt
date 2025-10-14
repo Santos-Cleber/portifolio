@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap:
+Sitemap: https://clebersantos.dev/sitemap.xml
 
 # Bloquear arquivos desnecessários
 Disallow: /cgi-bin/
