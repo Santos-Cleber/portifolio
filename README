@@ -1,65 +1,79 @@
-# Portfolio - Cleber Santos
+# 💼 Portfolio - Cleber Santos
 
-Portfolio pessoal de desenvolvedor frontend, criado com HTML, CSS e JavaScript puro.
+Portfolio pessoal de desenvolvedor frontend em formação, criado com HTML, CSS e JavaScript puro.
 
-## 🚀 Tecnologias
+## 🌐 Acesse o Portfolio
+**https://santos-cleber.github.io/portifolio/**
 
-- HTML5
-- CSS3 (Animações, Flexbox, Grid)
-- JavaScript (Vanilla)
-- Font Awesome (ícones)
+## 🚀 Tecnologias Utilizadas
+
+- HTML5 Semântico
+- CSS3 (Flexbox, Grid, Animations)
+- JavaScript Vanilla
+- Font Awesome 6.4.0 (Ícones)
 - Google Fonts (Poppins)
 
 ## 💡 Funcionalidades
 
-- ✅ Design responsivo (mobile-first)
-- ✅ Tema claro/escuro
-- ✅ Animações suaves
-- ✅ Menu hambúrguer mobile
-- ✅ Efeito de digitação
-- ✅ Partículas animadas no fundo
-- ✅ Scroll progress bar
-- ✅ Formulário de contato
+- ✅ Design totalmente responsivo (Mobile First)
+- ✅ Tema claro/escuro com persistência
+- ✅ Animações suaves e interativas
+- ✅ Menu hambúrguer para dispositivos móveis
+- ✅ Efeito de digitação dinâmico
+- ✅ Partículas animadas no background
+- ✅ Barra de progresso de scroll
+- ✅ Formulário de contato funcional
 - ✅ Botão "voltar ao topo"
+- ✅ Seções com animação ao scroll
+- ✅ Timeline de experiência profissional
+- ✅ Cards de projetos e habilidades
 
-## 📦 Como Usar
+## 📋 Seções do Portfolio
 
-1. Faça o download do arquivo `index.html`
-2. Abra com qualquer navegador
-3. Não precisa de servidor - funciona offline!
+### 🏠 Hero
+Apresentação inicial com efeito de digitação e chamadas para ação
+
+### 👨‍💻 Sobre Mim
+Informações pessoais, objetivos e apresentação profissional
+
+### 🛠️ Skills
+Grid de habilidades técnicas com ícones e hover effects
+
+### 💼 Projetos
+Showcase de projetos em destaque com tags de tecnologias
+
+### 📅 Experiência
+Timeline profissional com histórico de carreira
+
+### 📧 Contato
+Formulário funcional e links para redes sociais
 
 ## 🎨 Personalização
 
-Para personalizar o portfolio:
+O portfolio utiliza variáveis CSS para fácil customização:
+```css
+:root {
+  --bg: #0a0a0f;
+  --bg-light: #1a1a2e;
+  --text: #f0f0f0;
+  --text-dim: #a0a0a0;
+  --accent: #00ffff;
+  --accent-secondary: #0077ff;
+}
+```
 
-1. Abra o arquivo `index.html` em um editor de código
-2. Modifique os textos nas seções
-3. Atualize os links das redes sociais
-4. Adicione seus projetos reais
-5. Substitua o emoji por sua foto (opcional)
+## 📱 Responsividade
 
-## 📝 Seções
+- **Mobile:** < 576px
+- **Tablet:** 576px - 768px
+- **Desktop:** > 768px
+- **Large Desktop:** > 1024px
 
-- **Hero** - Apresentação inicial com efeito de digitação
-- **Sobre** - Informações pessoais e objetivos
-- **Skills** - Habilidades técnicas
-- **Projetos** - Portfolio de projetos
-- **Experiência** - Timeline profissional
-- **Contato** - Formulário de contato
+## 🔗 Redes Sociais
 
-## 🔗 Links Úteis
+- 📧 Email: clebersantos232@gmail.com
+- 💬 WhatsApp: +55 11 95305-7516
+- 💻 GitHub: [santos-cleber](https://github.com/santos-cleber)
+- 💼 LinkedIn: [Adicione seu link]
 
-- Email: clebersantos232@gmail.com
-- WhatsApp: +55 11 95305-7516
-- GitHub: [Adicione seu link]
-- LinkedIn: [Adicione seu link]
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-## 👨‍💻 Autor
-
-**Cleber Santos**
-- Desenvolvedor Frontend em formação
-- Apaixonado por tecnologia e aprendizado contínuo
+## 📦 Estrutura do Projeto

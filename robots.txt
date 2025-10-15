@@ -1,0 +1,10 @@
+# https://santos-cleber.github.io/portifolio/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://santos-cleber.github.io/portifolio/sitemap.xml
+
+# Disallow admin pages (se houver no futuro)
+# Disallow: /admin/

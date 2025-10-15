@@ -1,22 +1,28 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# HTML
+# Web files
 *.html text eol=lf
-
-# CSS
 *.css text eol=lf
-
-# JavaScript
 *.js text eol=lf
-
-# Markdown
+*.json text eol=lf
 *.md text eol=lf
+*.xml text eol=lf
+*.txt text eol=lf
 
 # Images
 *.jpg binary
 *.jpeg binary
 *.png binary
 *.gif binary
-*.svg text eol=lf
 *.ico binary
+*.webp binary
+
+# SVG treated as text
+*.svg text eol=lf
+
+# Fonts
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
