@@ -378,6 +378,14 @@
       transform: translateY(-10px);
       box-shadow: 0 15px 40px rgba(0,255,255,0.3);
     }
+    .project-card.clickable-card {
+      cursor: pointer;
+    }
+    .project-card.clickable-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      box-shadow: 0 20px 50px rgba(0,255,255,0.4);
+      border-color: var(--accent);
+    }
     .project-image {
       width: 100%;
       height: 180px;
@@ -647,6 +655,229 @@
       to { opacity: 1; transform: translateY(0); }
     }
     
+    /* Modal Simulador */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.3s ease;
+    }
+    .modal.show {
+      display: block;
+    }
+    .modal-content {
+      position: relative;
+      margin: 2rem auto;
+      padding: 2rem;
+      max-width: 960px;
+      width: 95%;
+      animation: slideUp 0.4s ease;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+      transition: all 0.3s ease;
+      z-index: 10001;
+    }
+    .modal-close:hover {
+      background: var(--accent);
+      color: #000;
+      transform: rotate(90deg);
+    }
+    
+    /* Simulador Wrapper */
+    .simulador-wrapper {
+      background: var(--bg);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid rgba(0, 255, 255, 0.1);
+      box-shadow: 0 20px 60px rgba(0, 255, 255, 0.1);
+    }
+    .simulador-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 2rem;
+    }
+    .simulador-logo {
+      font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.2rem;
+    }
+    .simulador-meta {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+    .simulador-card {
+      background: var(--card-bg);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .simulador-title {
+      font-size: 1.8rem;
+      margin: 0 0 0.5rem 0;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .simulador-lead {
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .simulador-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .form-row, .form-row-two > div {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .form-row-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .simulador-form label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+    .simulador-form input,
+    .simulador-form select {
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+    .simulador-form input:focus,
+    .simulador-form select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(0, 255, 255, 0.1);
+    }
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    .btn-calc {
+      padding: 0.8rem 1.5rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+    }
+    .btn-calc-primary {
+      background: var(--gradient);
+      color: #000;
+      box-shadow: 0 5px 20px rgba(0, 255, 255, 0.2);
+    }
+    .btn-calc-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0, 255, 255, 0.3);
+    }
+    .btn-calc-ghost {
+      background: transparent;
+      color: var(--text-dim);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .btn-calc-ghost:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: var(--accent);
+    }
+    .simulador-resultado {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 0.8rem;
+      background: linear-gradient(180deg, rgba(0, 255, 255, 0.03), rgba(0, 119, 255, 0.02));
+      border: 1px solid rgba(0, 255, 255, 0.1);
+      min-height: 100px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.4s ease;
+    }
+    .simulador-resultado.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .simulador-resultado p {
+      margin: 0.5rem 0;
+      line-height: 1.6;
+    }
+    .simulador-resultado hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin: 1rem 0;
+    }
+    .simulador-footer {
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    @media (max-width: 768px) {
+      .modal-content {
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+      .simulador-wrapper {
+        padding: 1rem;
+      }
+      .simulador-card {
+        padding: 1.5rem;
+      }
+      .form-row-two {
+        grid-template-columns: 1fr;
+      }
+      .form-actions {
+        flex-direction: column;
+      }
+    }
+    
     @media (min-width: 576px) {
       .hero-content h2 { font-size: 2.5rem; }
       .typing-text { font-size: 1.2rem; }
@@ -832,19 +1063,19 @@
     <section id="projetos">
       <h2 class="section-title">Projetos em Destaque</h2>
       <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-image"><i class="fas fa-shopping-cart"></i></div>
+        <article class="project-card clickable-card" onclick="openSimulador()">
+          <div class="project-image"><i class="fas fa-calculator"></i></div>
           <div class="project-content">
-            <h3>E-commerce Futurista</h3>
-            <p>Plataforma de e-commerce completa com carrinho de compras, pagamento integrado e dashboard administrativo.</p>
+            <h3>Simulador de Rescisão</h3>
+            <p>Calculadora trabalhista completa para simular rescisão: 13º proporcional, férias, FGTS, saldo salarial e descontos de INSS.</p>
             <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">MongoDB</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link"><i class="fas fa-code"></i> Código</a>
-              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+              <a href="https://github.com/Santos-Cleber/simulador-rescisao" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-code"></i> Código</a>
+              <a href="https://santos-cleber.github.io/simulador-rescisao/" target="_blank" rel="noopener noreferrer" class="project-link" onclick="event.stopPropagation()"><i class="fas fa-external-link-alt"></i> Demo</a>
             </div>
           </div>
         </article>
@@ -967,6 +1198,68 @@
       <i class="fas fa-arrow-up"></i>
     </a>
   </footer>
+
+  <!-- Modal Simulador de Rescisão -->
+  <div id="simuladorModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeSimulador()">&times;</button>
+      
+      <div class="simulador-wrapper">
+        <header class="simulador-header">
+          <div class="simulador-logo">Cleber.dev</div>
+          <div class="simulador-meta">Simulador de Rescisão</div>
+        </header>
+
+        <section class="simulador-card">
+          <h2 class="simulador-title">Simulador de Rescisão</h2>
+          <p class="simulador-lead">Calcule rapidamente 13º, férias proporcionais, saldo e FGTS. Uso simulado – resultados aproximados.</p>
+
+          <form id="rescisao-form" class="simulador-form" autocomplete="off" novalidate>
+            <div class="form-row">
+              <label for="salario">Salário mensal (R$)</label>
+              <input type="number" id="salario" min="0" step="0.01" placeholder="Ex: 2500.00" required>
+            </div>
+
+            <div class="form-row-two">
+              <div>
+                <label for="admissao">Data de admissão</label>
+                <input type="date" id="admissao" required>
+              </div>
+              <div>
+                <label for="saida">Data de saída</label>
+                <input type="date" id="saida" required>
+              </div>
+            </div>
+
+            <div class="form-row-two">
+              <div>
+                <label for="tipo">Tipo de rescisão</label>
+                <select id="tipo" required>
+                  <option value="semJustaCausa">Sem justa causa</option>
+                  <option value="pedidoDemissao">Pedido de demissão</option>
+                </select>
+              </div>
+              <div>
+                <label for="diasTrabalhados">Dias trabalhados (mês da saída)</label>
+                <input type="number" id="diasTrabalhados" min="0" max="31" value="24" required>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-calc btn-calc-primary">Calcular</button>
+              <button type="button" id="btnReset" class="btn-calc btn-calc-ghost">Limpar</button>
+            </div>
+          </form>
+
+          <div id="resultado" class="simulador-resultado"></div>
+
+          <div class="simulador-footer">
+            <small>Resultado estimado – verificar com departamento pessoal / contador.</small>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 
   <script>
     function toggleMenu() {
@@ -1182,6 +1475,116 @@
         }
       });
     });
+
+    // Funções do Simulador de Rescisão
+    function openSimulador() {
+      document.getElementById('simuladorModal').classList.add('show');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSimulador() {
+      document.getElementById('simuladorModal').classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Fechar modal ao clicar fora
+    window.onclick = function(event) {
+      const modal = document.getElementById('simuladorModal');
+      if (event.target === modal) {
+        closeSimulador();
+      }
+    }
+
+    // Funções do cálculo de rescisão
+    function calcularMesesTrabalhados(admissao, saida) {
+      let meses = (saida.getFullYear() - admissao.getFullYear()) * 12 + (saida.getMonth() - admissao.getMonth());
+      if (saida.getDate() >= 15) meses += 1;
+      return Math.max(0, meses);
+    }
+
+    function formatBR(value) {
+      return value.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    }
+
+    // Form do simulador
+    const rescisaoForm = document.getElementById('rescisao-form');
+    const resultado = document.getElementById('resultado');
+    const btnReset = document.getElementById('btnReset');
+
+    if (rescisaoForm) {
+      rescisaoForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const salario = parseFloat(document.getElementById('salario').value) || 0;
+        const admissao = new Date(document.getElementById('admissao').value);
+        const saida = new Date(document.getElementById('saida').value);
+        const tipo = document.getElementById('tipo').value;
+        const diasTrabalhados = parseInt(document.getElementById('diasTrabalhados').value) || 0;
+
+        if (!salario || isNaN(admissao.getTime()) || isNaN(saida.getTime()) || admissao > saida) {
+          resultado.innerHTML = '<p style="color:#ff8b8b;font-weight:600">Preencha valores válidos. Verifique as datas.</p>';
+          resultado.classList.add('show');
+          return;
+        }
+
+        resultado.innerHTML = '<p style="opacity:.8">Calculando<span class="dots">...</span></p>';
+        resultado.classList.add('show');
+
+        setTimeout(() => {
+          const mesesTrabalhados = calcularMesesTrabalhados(admissao, saida);
+
+          const decimoTerceiro = (salario / 12) * mesesTrabalhados;
+          const feriasProporcionais = (salario / 12) * mesesTrabalhados;
+          const adicionalFerias = feriasProporcionais / 3;
+          const saldoSalario = (salario / 30) * diasTrabalhados;
+
+          const saldoFgts = salario * 0.08 * mesesTrabalhados;
+          const multaFgts = tipo === 'semJustaCausa' ? saldoFgts * 0.4 : 0;
+
+          const aliquotaInss = 0.075;
+          const inssSalario = saldoSalario * aliquotaInss;
+          const inss13 = decimoTerceiro * aliquotaInss;
+
+          const saldoSalarioLiquido = saldoSalario - inssSalario;
+          const decimoTerceiroLiquido = decimoTerceiro - inss13;
+
+          const totalDireto = decimoTerceiroLiquido + feriasProporcionais + adicionalFerias + saldoSalarioLiquido;
+          const totalCaixa = saldoFgts + multaFgts;
+          const totalGeral = totalDireto + totalCaixa;
+
+          resultado.innerHTML = `
+            <div style="display:flex;flex-direction:column;gap:0.5rem">
+              <p><strong>Meses trabalhados:</strong> ${mesesTrabalhados}</p>
+              <p><strong>13º proporcional:</strong> R$ ${formatBR(decimoTerceiro)}</p>
+              <p><strong>Desconto INSS sobre 13º:</strong> -R$ ${formatBR(inss13)}</p>
+              <p><strong>13º líquido:</strong> R$ ${formatBR(decimoTerceiroLiquido)}</p>
+              <p><strong>Férias proporcionais:</strong> R$ ${formatBR(feriasProporcionais)}</p>
+              <p><strong>Adicional de férias (1/3):</strong> R$ ${formatBR(adicionalFerias)}</p>
+              <p><strong>Saldo de salário (${diasTrabalhados} dias):</strong> R$ ${formatBR(saldoSalario)}</p>
+              <p><strong>Desconto INSS sobre salário:</strong> -R$ ${formatBR(inssSalario)}</p>
+              <p><strong>Saldo líquido:</strong> R$ ${formatBR(saldoSalarioLiquido)}</p>
+              <hr>
+              <p><strong>Total direto ao trabalhador:</strong> <span style="color:#7cffb2">R$ ${formatBR(totalDireto)}</span></p>
+              <p><strong>Saldo do FGTS:</strong> R$ ${formatBR(saldoFgts)}</p>
+              <p><strong>Multa de 40% sobre o FGTS:</strong> R$ ${formatBR(multaFgts)}</p>
+              <p><strong>Total via Caixa:</strong> <span style="color:#7fb3ff">R$ ${formatBR(totalCaixa)}</span></p>
+              <hr>
+              <p><strong>💰 Estimativa total:</strong> <span style="color:#ffd27a">R$ ${formatBR(totalGeral)}</span></p>
+            </div>
+          `;
+
+          resultado.classList.remove('show');
+          void resultado.offsetWidth;
+          resultado.classList.add('show');
+        }, 600);
+      });
+
+      btnReset.addEventListener('click', () => {
+        rescisaoForm.reset();
+        resultado.innerHTML = '';
+        resultado.classList.remove('show');
+      });
+    }
   </script>
 </body>
 </html>
