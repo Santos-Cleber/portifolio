@@ -360,14 +360,82 @@
       -webkit-text-fill-color: transparent;
     }
     .skill-name { font-weight: 600; font-size: 0.9rem; }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+
+    /* ============================================
+       CARROSSEL DE PROJETOS — INÍCIO
+    ============================================ */
+    .carousel-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
       max-width: 1200px;
       width: 100%;
       margin-top: 1rem;
     }
+    .carousel-track-container {
+      overflow: hidden;
+      width: 100%;
+    }
+    .carousel-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.5s ease;
+      will-change: transform;
+    }
+    .carousel-track .project-card {
+      flex: 0 0 100%;
+      min-width: 100%;
+    }
+    .carousel-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carousel-btn:hover:not(:disabled) {
+      background: var(--accent);
+      color: #000;
+      box-shadow: 0 0 15px rgba(0,255,255,0.4);
+    }
+    .carousel-btn:disabled {
+      opacity: 0.25;
+      cursor: not-allowed;
+    }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-dim);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+    .carousel-dot.active {
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      width: 24px;
+      border-radius: 4px;
+    }
+    /* ============================================
+       CARROSSEL DE PROJETOS — FIM
+    ============================================ */
+
     .project-card {
       background: var(--card-bg);
       border-radius: 1rem;
@@ -653,6 +721,10 @@
       .typing-text { font-size: 1.2rem; }
       .section-title { font-size: 2rem; }
       .skills-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+      .carousel-track .project-card {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+        min-width: calc((100% - 1.5rem) / 2);
+      }
     }
     
     @media (min-width: 768px) {
@@ -690,11 +762,6 @@
       .skill-card { padding: 2rem 1rem; }
       .skill-icon { font-size: 3rem; margin-bottom: 1rem; }
       .skill-name { font-size: 1rem; }
-      .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        margin-top: 2rem;
-      }
       .project-image { height: 200px; font-size: 4rem; }
       .project-content { padding: 1.5rem; }
       .project-content h3 { font-size: 1.5rem; }
@@ -734,10 +801,18 @@
         flex-direction: row;
         justify-content: space-between;
       }
+      .carousel-track .project-card {
+        flex: 0 0 calc((100% - 3rem) / 3);
+        min-width: calc((100% - 3rem) / 3);
+      }
+      .carousel-btn { width: 48px; height: 48px; font-size: 1.1rem; }
     }
     
     @media (min-width: 1024px) {
-      .projects-grid { grid-template-columns: repeat(3, 1fr); }
+      .carousel-track .project-card {
+        flex: 0 0 calc((100% - 3rem) / 3);
+        min-width: calc((100% - 3rem) / 3);
+      }
     }
   </style>
 </head>
@@ -814,55 +889,111 @@
       </div>
     </section>
 
+    <!-- ============================================
+         SEÇÃO PROJETOS — CARROSSEL
+    ============================================ -->
     <section id="projetos">
       <h2 class="section-title">Projetos em Destaque</h2>
-      <div class="projects-grid">
-        <article class="project-card">
-          <div class="project-image"><i class="fas fa-calculator"></i></div>
-          <div class="project-content">
-            <h3>Simulador de Rescisão</h3>
-            <p>Calculadora trabalhista completa para simular rescisão: 13º proporcional, férias, FGTS, saldo salarial e descontos de INSS.</p>
-            <div class="project-tags">
-              <span class="tag">JHTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-               <a href="https://santos-cleber.github.io/simulador_rescisao" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-image"><i class="fas fa-tasks"></i></div>
-          <div class="project-content">
-            <h3>Task Manager </h3>
-            <p>Aplicativo de gerenciamento de tarefas com drag and drop, filtros avançados e sincronização em tempo real.</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-            </div>
-            <div class="project-links">
-               <a href="https://santos-cleber.github.io/Task-Manager" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-image"><i class="fas fa-chart-line"></i></div>
-          <div class="project-content">
-            <h3>Cartão de Perfil</h3>
-            <p>Cartão de Perfil simples criado do zero com figma e desenvolvido com HTML e CSS com metodologia BEM</p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-            </div>
-            <div class="project-links">
-              <a href="https://santos-cleber.github.io/projeto-01-cartao-perfil" target="_blank" rel= "noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-            </div>
-          </div>
-        </article>
-      </div>
+
+      <div class="carousel-wrapper">
+
+        <!-- Seta esquerda -->
+        <button class="carousel-btn carousel-btn--prev" aria-label="Projeto anterior">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <!-- Janela visível -->
+        <div class="carousel-track-container">
+          <div class="carousel-track" id="carouselTrack">
+
+            <article class="project-card">
+              <div class="project-image"><i class="fas fa-calculator"></i></div>
+              <div class="project-content">
+                <h3>Simulador de Rescisão</h3>
+                <p>Calculadora trabalhista completa para simular rescisão: 13º proporcional, férias, FGTS, saldo salarial e descontos de INSS.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://santos-cleber.github.io/simulador_rescisao" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image"><i class="fas fa-tasks"></i></div>
+              <div class="project-content">
+                <h3>Task Manager</h3>
+                <p>Aplicativo de gerenciamento de tarefas com drag and drop, filtros avançados e sincronização em tempo real.</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://santos-cleber.github.io/Task-Manager" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-image"><i class="fas fa-chart-line"></i></div>
+              <div class="project-content">
+                <h3>Cartão de Perfil</h3>
+                <p>Cartão de Perfil simples criado do zero com figma e desenvolvido com HTML e CSS com metodologia BEM</p>
+                <div class="project-tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                </div>
+                <div class="project-links">
+                  <a href="https://santos-cleber.github.io/projeto-01-cartao-perfil" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 
+              ========================================
+              PARA ADICIONAR UM NOVO PROJETO NO FUTURO,
+              COPIE O BLOCO <article> ABAIXO E COLE
+              AQUI DENTRO DO carousel-track.
+              ========================================
+
+            <article class="project-card">
+              <div class="project-image"><i class="fas fa-ICONE-AQUI"></i></div>
+              <div class="project-content">
+                <h3>Nome do Projeto</h3>
+                <p>Descrição do projeto.</p>
+                <div class="project-tags">
+                  <span class="tag">Tecnologia</span>
+                </div>
+                <div class="project-links">
+                  <a href="URL-DO-PROJETO" target="_blank" rel="noopener noreferrer" class="project-link">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                  </a>
+                </div>
+              </div>
+            </article>
+            -->
+
+          </div><!-- fim .carousel-track -->
+        </div><!-- fim .carousel-track-container -->
+
+        <!-- Seta direita -->
+        <button class="carousel-btn carousel-btn--next" aria-label="Próximo projeto">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+      </div><!-- fim .carousel-wrapper -->
+
+      <!-- Pontos de navegação -->
+      <div class="carousel-dots" id="carouselDots"></div>
+
     </section>
+    <!-- ============================================
+         FIM SEÇÃO PROJETOS
+    ============================================ -->
 
     <section id="Cursos">
       <h2 class="section-title">Cursos</h2>
@@ -1147,6 +1278,99 @@
         }
       });
     });
+
+    // ============================================
+    // CARROSSEL DE PROJETOS
+    // ============================================
+    (function () {
+      const track      = document.getElementById('carouselTrack');
+      const prevBtn    = document.querySelector('.carousel-btn--prev');
+      const nextBtn    = document.querySelector('.carousel-btn--next');
+      const dotsContainer = document.getElementById('carouselDots');
+
+      let currentIndex = 0;
+
+      // Quantos cards ficam visíveis por vez
+      function getVisibleCount() {
+        if (window.innerWidth >= 768) return 3;
+        if (window.innerWidth >= 576) return 2;
+        return 1;
+      }
+
+      // Cria os pontos de navegação
+      function buildDots(total, visible) {
+        dotsContainer.innerHTML = '';
+        const totalGroups = Math.ceil(total / visible);
+        for (let i = 0; i < totalGroups; i++) {
+          const dot = document.createElement('button');
+          dot.classList.add('carousel-dot');
+          dot.setAttribute('aria-label', `Grupo ${i + 1}`);
+          dot.addEventListener('click', () => {
+            currentIndex = i * visible;
+            updateCarousel();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      // Atualiza posição, botões e pontos
+      function updateCarousel() {
+        const cards = track.querySelectorAll('.project-card');
+        const total = cards.length;
+        const visible = getVisibleCount();
+        const maxIndex = Math.max(0, total - visible);
+
+        // Garante que o índice não ultrapasse o máximo
+        if (currentIndex > maxIndex) currentIndex = maxIndex;
+
+        // Calcula o offset com base na largura real do container
+        const containerWidth = track.parentElement.offsetWidth;
+        const gap = 24; // 1.5rem em px
+        const cardWidth = (containerWidth - gap * (visible - 1)) / visible;
+        const offset = currentIndex * (cardWidth + gap);
+
+        track.style.transform = `translateX(-${offset}px)`;
+
+        // Atualiza botões
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex >= maxIndex;
+
+        // Atualiza pontos
+        const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        const activeGroup = Math.floor(currentIndex / visible);
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === activeGroup);
+        });
+      }
+
+      // Navega pelo carrossel
+      function moveCarousel(direction) {
+        const cards = track.querySelectorAll('.project-card');
+        const visible = getVisibleCount();
+        const maxIndex = Math.max(0, cards.length - visible);
+        currentIndex = Math.max(0, Math.min(currentIndex + visible * direction, maxIndex));
+        updateCarousel();
+      }
+
+      // Eventos dos botões
+      prevBtn.addEventListener('click', () => moveCarousel(-1));
+      nextBtn.addEventListener('click', () => moveCarousel(1));
+
+      // Rebuild ao redimensionar tela
+      function setup() {
+        const cards = track.querySelectorAll('.project-card');
+        const visible = getVisibleCount();
+        buildDots(cards.length, visible);
+        currentIndex = 0;
+        updateCarousel();
+      }
+
+      window.addEventListener('resize', setup);
+      setup();
+    })();
+    // ============================================
+    // FIM CARROSSEL
+    // ============================================
   </script>
 </body>
 </html>
